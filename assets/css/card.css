@@ -1,0 +1,107 @@
+.card
+{
+    display: block;
+    width: calc(100% - 20px);
+    height: 175px;
+    background-color: white;
+    color: #5a7a86;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0),
+        0 -2px inset lightgray;
+    transform: translateY(0);
+}
+
+.card:hover
+{
+    transform: translateY(-7px);
+    box-shadow: 0px 6px 8px 2px rgba(0,0,0,0.37),
+        0 -2px inset lightgray;
+    transition: transform .125s ease-in-out,
+        box-shadow .125s ease-in-out;
+}
+
+.card:not(:hover)
+{
+    transform: translateY(0);
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0),
+        0 -2px inset lightgray;
+    transition: transform .125s ease-in-out,
+        box-shadow .125s ease-in-out;
+}
+
+.card .content
+{
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    width: calc(100% - 270px);
+    height: inherit;
+}
+
+.card img
+{
+    display: inline-block;
+    height: 100%;
+    width: 250px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    object-fit: cover;
+}
+
+.card h2
+{
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 12px;
+    margin-bottom: 0;
+    text-align: left;
+    font-size: 30px;
+    font-weight: 400;
+    vertical-align: top;
+}
+
+.card h3
+{
+    position: absolute;
+    text-align: right;
+    right: 15px;
+    display: inline-block;
+    top: -10px;
+
+    color: #5a7a8680;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.card footer
+{
+    position: absolute;
+    display: inline-block;
+    vertical-align: bottom;
+    bottom: 3px;
+    margin-left: 14px;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.card p
+{
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    
+    line-height: 1.25rem;
+    margin-left: 14px;
+    margin-right: 20px;
+    margin-top: 3px;
+    font-size: 15px;
+    font-weight: 300;
+    white-space: pre-line;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

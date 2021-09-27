@@ -1,0 +1,23 @@
+@import "card.css";
+
+.card_list
+{
+    z-index: 0;
+    display: block;
+    position: absolute;
+    right: 0;
+    text-decoration: none;
+    background-color: white;
+
+    /*Scrollbar*/
+    overflow-y: visible;
+}
+
+.card_list ul
+{
+    z-index: 0;
+    display: block;
+    list-style-type: none;
+    margin: 20px, 0, 0, 0;
+    padding: 0;
+}

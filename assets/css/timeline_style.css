@@ -1,0 +1,62 @@
+@import "sidebar.css";
+@import "navbar.css";
+@import "card_list.css";
+
+.body
+{
+  overflow-y: hidden;
+}
+
+.rect
+{
+  display: block;
+  position: absolute;
+}
+
+.sidebar
+{
+  width: 300px; /* Set the width of the sidebar */
+}
+
+.navbar
+{
+  width: calc(100vw - 300px);
+  height: 75px;
+}
+
+/* Style page content */
+.card_list
+{
+  width: calc(100vw - 300px);
+  height: calc(100vh - 75px);
+  top: 75px;
+}
+
+/*Scrollbar*/
+::-webkit-scrollbar
+{
+  display: block;
+  margin-right: 2px;
+  width: 10px;
+}
+::-webkit-scrollbar-thumb
+{
+  background: #5a7a8653;
+  border-radius: 7.5px;
+  
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5a7a86a6; 
+}
+::-webkit-scrollbar-track {
+  background: #ffffff00; 
+  margin-top: 75px;
+  margin-right: 2px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) 
+{
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}

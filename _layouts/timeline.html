@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Timeline</title>
+        <link rel="stylesheet" href="{{ "/assets/css/timeline_style.css " | prebend: site.baseurl }}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                $("#current-page").click(function()
+                {
+                    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <aside class="sidebar">
+            <a href="/"><img class="avatar" src="/assets/images/avatar.jpg"></a>
+            <h1>CHRISTOPHER GEIS</h1>
+            <h2>━</h2>
+            
+            <p>
+                I'm a computer engineering student
+                at the University of Nebraksa at Omaha.
+                <br>
+                This site will act as a space for me
+                to document my progress through
+                various projects.
+            </p>
+
+            <ul class="social">
+                <div class="rect"></div>
+                <h1>CONTACTS</h1>
+
+                <li><a href={{ site.linkedin_url }}><img src="/assets/images/Icons/Linkedin.png"></a></li>
+                <li><a href={{ site.github_url }}><img src="/assets/images/Icons/Github.png"></a></li>
+                <li><a href={{ site.facebook_url }}><img src="/assets/images/Icons/Facebook.png"></a></li>
+                <li><a href="mailto:geis.christopher@gmail.com"><img src="/assets/images/Icons/Email.png"></a></li>
+            </ul>
+        </aside>
+
+        <nav class="navbar">
+            <ul>
+                <li><a id="current-page">Timeline</a></li>
+                <li><a href="put page link here!">Blogs</a></li>
+                <li><a href="put page link here!">Projects</a></li>
+                <li><a href="put page link here!">Resume</a></li>
+                <li><a href="put page link here!">About Me</a></li>
+            </ul>
+        </nav>
+
+        <div class="card_list">
+            <ul>
+                {% for post in site.posts %}
+                <a href="{{ post.url }}"><li class="card">
+                        <img src="{{ post.thumbnail }}">
+                        <article class="content">
+                            <h2>{{ post.title }}</h2>
+                            <h3>{{ post.subtitle }}</h3>
+                            <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
+                            <footer>{{ post.type }} - {{ post.date | date_to_long_string }}</footer>
+                        </article>
+                    </li></a>
+                {% endfor %}
+            </ul>
+        </div>
+    </body>
+</html>
