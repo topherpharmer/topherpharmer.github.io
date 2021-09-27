@@ -26,6 +26,7 @@
     display: flex;
     justify-content: space-evenly;
     text-align: center;
+    white-space: nowrap;
     list-style: none;
     padding: 0;
 }
@@ -51,7 +52,7 @@
     opacity: 60%;
 }
 
-.navbar #current-page
+.navbar .current-page
 {
     text-decoration: underline;
     cursor: pointer;

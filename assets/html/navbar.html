@@ -1,0 +1,30 @@
+
+<head>
+    <script>
+        //Check the 5 anchors to see if any of them match the current url. If so, mark that one as selected.
+        var element = document.getElementById(document.title.toLocaleLowerCase());
+        element.setAttribute("class", "current-page");
+        element.removeAttribute("href");
+
+        $(document).ready(function(){
+            $(".current-page").click(function()
+            {
+                window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+            });
+        });
+        
+    </script>
+    <link rel="stylesheet" href="/assets/css/navbar.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a id="timeline" href="/index.html">Timeline</a></li>
+            <li><a id="blogs" href="/blogs.html">Blogs</a></li>
+            <li><a id="projects" href="put page link here!">Projects</a></li>
+            <li><a id="resume" href="put page link here!">Resume</a></li>
+            <li><a id="about_me" href="put page link here!">About Me</a></li>
+        </ul>
+    </nav>
+</body>
