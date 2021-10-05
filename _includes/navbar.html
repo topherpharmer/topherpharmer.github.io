@@ -1,0 +1,56 @@
+
+<head>
+    <link rel="stylesheet" href="/assets/css/navbar.css ">
+    <script>
+        var selectedLink;
+        var element;
+        function updateTimeline(listIn)
+        {
+            if (element != null)
+            {
+                element.removeAttribute("class");
+            }
+            //Check the 5 anchors to see if any of them match the current url. 
+            //If so, mark that one as selected.
+            document.title = listIn;
+            //window.history.pushState('', '', "/" + listIn);
+            selectedLink = document.title.toLocaleLowerCase();
+            element = document.getElementById(selectedLink);
+            element.className = "current_page";
+            element.removeAttribute("href");
+
+            switch (listIn)
+            {
+                case 'Blogs':
+                    updateList("blog");
+                    break;
+                case 'Projects':
+                    updateList("project");
+                    break;
+                default:
+                    updateList("update");
+            }
+
+        }
+
+        //Scroll to top if clicking on the current page link
+        $(document).ready(function(){
+            $(".current_page").click(function()
+            {
+                window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a id="timeline" onclick="updateTimeline('Timeline')">Timeline</a></li>
+            <li><a id="blogs" onclick="updateTimeline('Blogs')">Blogs</a></li>
+            <li><a id="projects" onclick="updateTimeline('Projects')">Projects</a></li>
+            <li><a id="resume" href="/pages/resume.html">Resume</a></li>
+            <li><a id="about-me" href="/pages/about-me.html">About Me</a></li>
+        </ul>
+    </nav>
+</body>

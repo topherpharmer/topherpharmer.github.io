@@ -38,13 +38,14 @@
 }
 
 /* The text you see in the navbar*/
-.navbar a
+.navbar a, .navbar h2
 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 300;
     font-size: 30px;
     text-decoration: none;
     color: #5a7a86cc;
+    cursor: pointer; cursor: hand;
 }
 
 .navbar a:hover
@@ -52,9 +53,8 @@
     opacity: 60%;
 }
 
-.navbar .current-page
+.navbar .current_page
 {
     text-decoration: underline;
-    cursor: pointer;
-    cursor: hand;
+    cursor: pointer; cursor: hand;
 }

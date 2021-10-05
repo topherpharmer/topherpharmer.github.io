@@ -1,5 +1,4 @@
 @import "navbar.css";
-@import "card_list.css";
 
 .body
 {
@@ -48,9 +47,8 @@
   background: #5a7a86a6; 
 }
 ::-webkit-scrollbar-track {
-  background: #ffffff00; 
+  background: #00000000; 
   margin-top: 75px;
-  margin-right: 2px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
