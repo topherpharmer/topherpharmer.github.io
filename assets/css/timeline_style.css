@@ -1,8 +1,21 @@
-@import "navbar.css";
+@font-face {
+  font-family: 'Archivo Narrow';
+  src: url();
+}
 
-.body
+html
+{
+  --dominant: #278A8F;
+  --complementary: #EDD8BB;
+  --accent: #C23B27;
+  --white: #F2E9E3;
+  --black: #242626;
+}
+
+body
 {
   overflow-y: hidden;
+  background-color: var(--black);
 }
 
 .rect
@@ -11,15 +24,88 @@
   position: absolute;
 }
 
-.sidebar
+.intro_card
 {
-  width: 300px; /* Set the width of the sidebar */
+  position: absolute;
+  display: block;
+  width: 80%;
+  height: 60%;
+  margin: 0 calc((100% - 80%) / 2);
+  top: 5%;
+
+  border-radius: 30px;
+  background: var(--white);
+}
+
+.intro_card .accent_img
+{
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  right: 0;
+
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  clip-path: polygon(calc((50%) * 0.17701149425) 0, 100% 0, 100% 100%, 0 100%);
+
+  justify-content: center;
+  align-items: center;
+
+  background-image: url(/assets/images/BG_Scope_Light.jpg);
+  background-size: cover;
+  background-color: var(--dominant);
+  background-blend-mode: multiply;
+}
+
+.intro_card .avatar
+{
+  height: 60%;
+  display: flex;
+
+  border-radius: 50%;
+  background-color: var(--white);
 }
 
 .navbar
 {
-  width: calc(100vw - 300px);
-  height: 75px;
+  position: inherit;
+  display: block;
+  overflow-x: hidden;
+  z-index: 1;
+
+  top: 0;
+  right: 0;
+
+  width: 95%;
+  height: 5vh;
+}
+
+.navbar ul
+{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    white-space: nowrap;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar li
+{
+    width: 10%;
+    display: inline-block;
+}
+
+/* The text you see in the navbar*/
+.navbar a, .navbar h2
+{
+    font-family: 'Archivo Narrow';
+    font-weight: 300;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--white);
+    cursor: pointer; cursor: hand;
 }
 
 /* Style page content */
