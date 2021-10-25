@@ -1,6 +1,18 @@
 @font-face {
-  font-family: 'Archivo Narrow';
-  src: url();
+  font-family: 'Avenir Next';
+  src: url(/assets/fonts/AvenirNextLTPro-Regular.otf);
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url(/assets/fonts/AvenirNextLTPro-Bold.otf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url(/assets/fonts/AvenirNextLTPro-It.otf);
+  font-style: italic;
 }
 
 html
@@ -35,6 +47,28 @@ body
 
   border-radius: 30px;
   background: var(--white);
+}
+.info
+{
+  top: 5vh;
+  margin-left: 5%;
+  position: absolute;
+  width: 45%;
+}
+.info h1
+{
+  top: 5vh;
+  font-family: 'Avenir Next';
+  font-size: xx-large;
+  color: var(--dominant);
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.info p
+{
+  font-family: 'Source Sans Pro';
+  color: var(--black);
 }
 
 .intro_card .accent_img
@@ -86,6 +120,7 @@ body
     display: flex;
     justify-content: space-evenly;
     text-align: center;
+
     white-space: nowrap;
     list-style: none;
     padding: 0;
@@ -97,12 +132,24 @@ body
     display: inline-block;
 }
 
+.navbar li .highlight
+{
+  display: block;
+  margin-top: -40%;
+  margin-left: -13%;
+  width: 130%;
+  height: 120%;
+  background-color: var(--accent);
+  border-radius: 20px;
+}
+
 /* The text you see in the navbar*/
 .navbar a, .navbar h2
 {
     font-family: 'Archivo Narrow';
     font-weight: 300;
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 100%;
     text-decoration: none;
     color: var(--white);
     cursor: pointer; cursor: hand;

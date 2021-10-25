@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="{{ "/assets/css/timeline_style.css " | prebend: site.baseurl }}">
         <link rel="stylesheet" href="/assets/css/card_list.css ">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Narrow">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
         <script>
@@ -69,6 +70,14 @@
     </head>
     <body>
         <div class="intro_card">
+            <div class="info">
+                <h1>Christopher Geis</h1>
+                <p>
+                    I'm a computer engineering student at the University of Nebraksa at Omaha.
+                    <br><br>
+                    This site will act as a space for me to document my progress through various projects.
+                </p>
+            </div>
             <div class="accent_img">
                 <img class="avatar" src="/assets/images/avatar1_no_bg.png"></img>
                 <nav class="navbar">
@@ -76,8 +85,8 @@
                         <li><a id="timeline" onclick="updateTimeline('Timeline')">Timeline</a></li>
                         <li><a id="blogs" onclick="updateTimeline('Blogs')">Blogs</a></li>
                         <li><a id="projects" onclick="updateTimeline('Projects')">Projects</a></li>
-                        <li><a id="resume" href="/pages/resume.html">Resume</a></li>
                         <li><a id="about-me" href="/pages/about-me.html">About Me</a></li>
+                        <li><a id="resume" href="/pages/resume.html">Resume</a><div class="highlight"></div></li>
                     </ul>
                 </nav>
             </div>
