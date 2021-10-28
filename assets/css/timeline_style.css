@@ -39,19 +39,20 @@ body
 .intro_card
 {
   position: absolute;
-  display: block;
-  width: 80%;
-  height: 60%;
+  display: inline-block;
+  width: 80vw;
+  height: 60vh;
   margin: 0 calc((100% - 80%) / 2);
-  top: 5%;
+  top: 5vh;
 
   border-radius: 30px;
   background: var(--white);
 }
+
 .info
 {
   top: 5vh;
-  margin-left: 5%;
+  margin-left: 2.5%;
   position: absolute;
   width: 45%;
 }
@@ -59,7 +60,7 @@ body
 {
   top: 5vh;
   font-family: 'Avenir Next';
-  font-size: xx-large;
+  font-size: calc(30px + (56 - 30) * ((40vw - 320px) / (600 - 320)));
   color: var(--dominant);
   font-weight: lighter;
   text-transform: uppercase;
@@ -68,6 +69,7 @@ body
 .info p
 {
   font-family: 'Source Sans Pro';
+  font-size: calc(18px + (30 - 18) * ((40vw - 320px) / (600 - 320)));
   color: var(--black);
 }
 
@@ -103,7 +105,7 @@ body
 
 .navbar
 {
-  position: inherit;
+  position: absolute;
   display: block;
   overflow-x: hidden;
   z-index: 1;
@@ -111,15 +113,29 @@ body
   top: 0;
   right: 0;
 
-  width: 95%;
+  width: 100%;
   height: 5vh;
+}
+
+.navbar .logo
+{
+  display: block;
+  position: absolute;
+  left: 2.5%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4vh;
+  color: var(--black);
 }
 
 .navbar ul
 {
     display: flex;
+    position: absolute;
     justify-content: space-evenly;
+    right: 0;
     text-align: center;
+    width: 46%;
 
     white-space: nowrap;
     list-style: none;
@@ -153,6 +169,36 @@ body
     text-decoration: none;
     color: var(--white);
     cursor: pointer; cursor: hand;
+}
+
+.social
+{
+  width: 100%;
+  margin-left: -6px;
+}
+
+/* Social links in the side bar*/
+.social ul
+{
+  align-items: center;
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  
+}
+.social li
+{
+  width: 20%;
+  display: inline-block;
+}
+.social img
+{
+  position: absolute;
+  bottom: 37.5px;
+  max-width: 42px;
+  max-height: auto;
+  margin: auto;
+  image-rendering:crisp-edges;
 }
 
 /* Style page content */
